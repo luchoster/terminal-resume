@@ -1,0 +1,37 @@
+<?php
+  function _format_job_obj($raw_post) {
+    $pfolio_id = $raw_post->ID;
+
+    $pfolio = (object) [
+      'ID' => $pfolio_id,
+      'title' => $raw_post->post_title,
+      'content' => apply_filters('the_content', $raw_post->post_content),
+      'feature_image' => $raw_post->the_post_thumbnail('full'),
+    ];
+
+    return $pfolio;
+  }
+
+  function getPFolio() {
+    $args = array(
+      'post_type' => 'portfolio',
+      'orderby' => 'menu_order',
+      'post_status' => 'publish',
+      'posts_per_page' => -1,
+    );
+
+    $query_result = new WP_Query($args);
+    $pfolio = array_map('_format_job_obj', $query_result->posts);
+
+    return $pfolio;
+  }
+  function registerPortfolioRoutes() {
+    $namespace = 'api';
+
+    register_rest_route($namespace, '/portfolio', array(
+      'method' => 'GET',
+      'callback' => 'getPFolio'
+    ));
+  }
+  add_action('rest_api_init', 'registerPortfolioRoutes');
+?>
