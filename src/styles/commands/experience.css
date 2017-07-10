@@ -1,0 +1,44 @@
+/***EXPERIENCES*****/
+
+.list-experiences {
+  padding-top: 15px;
+}
+
+.list-experiences i {
+    margin-right: 10px;
+    color: #8e908f;/*#8d7e60;*/
+    font-size: 16px;
+}
+.list-experiences span.date {
+    font-family: 'Open sans',sans-serif;
+    font-weight: 400;
+    float: right;
+    font-style: italic;
+}
+.list-experiences ul li {
+    margin-left: 45px;
+    line-height: 1;
+}
+p.slogan {
+    text-align: center;
+    font-family: 'Tangerine',sans-serif;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 1;
+    color: #212121;
+    margin-top: 40px;
+}
+.signature {
+    float: right;
+    margin-top: 30px;
+}
+.box-text p.slogan .fa-quote-left {
+    margin-right: 15px;
+}
+.box-text p.slogan .fa-quote-right {
+    margin-left: 15px;
+}
+.box-text p.slogan i{
+    font-size: 25px;
+    color: #ddd;
+}

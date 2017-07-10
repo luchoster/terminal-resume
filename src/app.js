@@ -61,6 +61,7 @@ class App extends Component {
             show: 'shows the instructions message',
             help: 'list all the available commands'
           }}
+          promptSymbol="$"
           msg={introMsg()}
           watchConsoleLogging={false}
         />

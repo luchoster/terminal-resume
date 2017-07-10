@@ -1,0 +1,17 @@
+/*Skills*/
+
+.skills-box .meter {
+    height: 6px;
+    border: 1px solid #434343;
+    padding: 1px;
+    margin-bottom: 15px;
+}
+.skills-box .meter p {
+    height: 4px;
+    background: #252525;
+    margin: 1px;
+}
+.skills-box .skills-progress .percval {
+    float: right;
+    color: #434343;
+}

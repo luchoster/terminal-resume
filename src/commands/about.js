@@ -25,10 +25,10 @@ const aboutMe = (data) => {
           <span>Hello. I am a</span>
           <span className="rotate-words rotateInWord">
             <span>Front-End Developer</span>
-            <span>Professional Soccer Player</span>
+            <span>Pro Soccer Player</span>
             <span>ReactJS Developer</span>
-            <span>Freelancer</span>
             <span>Wordpress lover</span>
+            <span>Freelancer</span>
           </span>
           <br />
           I live in the best town in the world (Las Vegas).

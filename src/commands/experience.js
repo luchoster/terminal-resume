@@ -8,7 +8,7 @@ const _renderJob = job => {
     <div key={job.ID} className="list-experiences">
       <Title>
         <i className="fa fa-briefcase" />
-        <span>{job.title}</span>
+        <span className="job-title">{job.title}</span>
         <span className="date">{job.date}</span>
       </Title>
       <div dangerouslySetInnerHTML={createMarkup(job.content)} />
