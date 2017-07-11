@@ -6,9 +6,9 @@ const personalData = () => {
     <div>
       <Container>
         <Title>Personal data</Title>
-        <p>Name: Luis Suarez</p>
+        <p>Name: Lucho Su&aacute;rez</p>
         <p>Phone: <a href="tel:7025140607">(702) 514-0607</a></p>
-        <p>E-mail: contact@luchoster.net</p>
+        <p>E-mail: hey@checkitout.io</p>
         <Title>Education</Title>
         <p>USAC (Guatemala)<br />
           UMG (Guatemala)<br />
