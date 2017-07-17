@@ -1,5 +1,6 @@
 import R from 'ramda'
 import React from 'react'
+import Typist from 'react-typist'
 import { Title, Container } from  '../styles/styled.js'
 
 const _renderSkills = item => {
@@ -20,25 +21,34 @@ const aboutMe = (data) => {
   return(
     <div>
       <Container>
-        <Title>A little about me</Title>
-        <p>
-          <span>Hello. I am a</span>
-          <span className="rotate-words rotateInWord">
-            <span>Front-End Developer</span>
-            <span>Pro Soccer Player</span>
-            <span>ReactJS Developer</span>
-            <span>Wordpress lover</span>
-            <span>Freelancer</span>
-          </span>
-          <br />
-          I live in the best town in the world (Las Vegas).
-          Besides coding and spending most of my time dealing with Computers,
-          I am also a Professional Indoor Soccer Player, playing for
-          The Las Vegas Legends.
-        </p>
-        <p className="slogan">
-          " I would like to change the world, but they won't give me the source code. "
-        </p>
+
+          <Title>A little about me</Title>
+          <p>
+            <span>Hello. I am a</span>
+            <span className="rotate-words rotateInWord">
+              <span>Front-End Developer</span>
+              <span>Pro Soccer Player</span>
+              <span>ReactJS Developer</span>
+              <span>Wordpress lover</span>
+              <span>Freelancer</span>
+            </span>
+            <br />
+            I live in the best town in the world (Las Vegas).
+            Besides coding and spending most of my time dealing with Computers,
+            I am also a Professional Indoor Soccer Player, playing for
+            The Las Vegas Legends.
+          </p>
+          <Typist
+            avgTypingDelay={90}
+            cursor={{
+              hideWhenDone: true,
+              hideWhenDoneDelay: 0
+            }}
+            >
+            <p className="slogan">
+              " I would like to change the world, but they won't give me the source code. "
+            </p>
+          </Typist>
 
         <div className="skills-area">
           <div className="box-text">

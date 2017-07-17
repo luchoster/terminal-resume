@@ -1,6 +1,7 @@
 import R from 'ramda'
 import React, { Component } from 'react'
 import Terminal from 'terminal-in-react'
+
 import { aboutMe, personalData, Work, Experience } from './commands/index'
 import { connect } from 'react-redux'
 import { Skills, Jobs, Portfolio } from './actions/index'
