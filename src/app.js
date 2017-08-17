@@ -1,11 +1,14 @@
-import R from 'ramda'
-import React, { Component } from 'react'
-import Terminal from 'terminal-in-react'
+import R                                           from 'ramda'
+import React, { Component }                        from 'react'
+import Terminal                                    from 'terminal-in-react'
+import Konami                                      from 'react-konami'
+import { connect }                                 from 'react-redux'
 
 import { aboutMe, personalData, Work, Experience } from './commands/index'
-import { connect } from 'react-redux'
-import { Skills, Jobs, Portfolio } from './actions/index'
-import lucho from './img/lucho.jpg'
+import { Skills, Jobs, Portfolio }                 from './actions/index'
+import lucho                                       from './img/lucho.jpg'
+
+const resume = require('./assets/resume.pdf')
 
 const introMsg = () => {
   return(
@@ -29,6 +32,11 @@ class App extends Component {
     this.props.onMount()
   }
 
+  resume = () => {
+    let r = window.open(resume)
+    r.print()
+  }
+
   showMsg = () => 'Hello World'
   motto = () => "I would like to change the world, but they won't give me the source code."
   introMsg = "Welcome to my site. Start by typing: 'help', to see the available commands."
@@ -38,6 +46,7 @@ class App extends Component {
       <div className="terminal-container" style={{
           background: `#fbfbfb url(${lucho}) no-repeat center bottom`
         }}>
+        <Konami easterEgg={ () => this.resume() } />
         <Terminal
           color="green"
           backgroundColor="black"
@@ -51,6 +60,7 @@ class App extends Component {
             info: personalData,
             experience: () => Experience(this.props.jobs),
             work: () => Work(this.props.work),
+            "konami code": () => {}
           }}
           descriptions={{
             echo: false,
@@ -60,7 +70,8 @@ class App extends Component {
             experience: 'my work experience',
             work: 'shows my latest work examples',
             show: 'shows the instructions message',
-            help: 'list all the available commands'
+            help: 'list all the available commands',
+            "konami code": 'print my CV'
           }}
           promptSymbol="$"
           msg={introMsg()}
